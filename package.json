@@ -1,0 +1,13 @@
+{
+  "name": "medilink-workspace",
+  "version": "1.0.0",
+  "private": true,
+  "description": "MediLink – Medical Shop Management System Workspace",
+  "scripts": {
+    "dev": "node -e \"const { spawn } = require('child_process'); spawn('npm', ['run', 'dev'], { cwd: 'backend', stdio: 'inherit', shell: true }); spawn('npm', ['run', 'dev'], { cwd: 'MediLink', stdio: 'inherit', shell: true });\"",
+    "dev:frontend": "npm run dev --prefix MediLink",
+    "dev:backend": "npm run dev --prefix backend",
+    "build": "npm run build --prefix MediLink",
+    "setup": "npm run db:setup --prefix backend"
+  }
+}
